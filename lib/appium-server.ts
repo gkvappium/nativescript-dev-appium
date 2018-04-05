@@ -89,7 +89,7 @@ export class AppiumServer {
             }
         }
         if (!this._args.devMode) {
-            this._deviceManager.installApp(this._args);
+            this._deviceManager.unInstallApp(this._args);
         }
         log("Starting server...", this._args.verbose);
         const logLevel = this._args.verbose === true ? "debug" : "info";
